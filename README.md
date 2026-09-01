@@ -16,7 +16,7 @@ This is the standard browser-based computing environment for ISYE 4031 in Fall 2
 
    ```bash
    python scripts/check_environment.py
-   pytest -q
+   pytest -q labs/00_getting_started hw1_jaryszak_sydney test_environment_check.py
    ```
 
 6. Start either agent from the repository root:

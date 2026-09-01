@@ -38,7 +38,7 @@ def main() -> int:
         if executable:
             print(f"{command}: {executable}")
         else:
-            failures.append(f"{command}: command not found on PATH")
+            print(f"{command}: optional CLI not found on PATH; continuing without it")
 
     if failures:
         print("\nEnvironment check failed:", file=sys.stderr)

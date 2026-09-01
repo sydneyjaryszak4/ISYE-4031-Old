@@ -29,16 +29,23 @@ This prints results for Parts 1b–3 and writes:
 
 ```bash
 cd hw1_jaryszak_sydney
-pytest -q
+pytest -q test_hw1_analysis.py
+```
+
+For the Canvas ZIP, rename or copy the test file to `test_analysis.py` as required by the assignment:
+
+```bash
+cp test_hw1_analysis.py test_analysis.py
 ```
 
 All four tests should pass.
 
 ## Submission archive
 
-After `python analysis.py` and `pytest -q` both succeed, create the Canvas upload from this directory:
+After `python analysis.py` and `pytest -q test_hw1_analysis.py` both succeed, create the Canvas upload from this directory:
 
 ```bash
+cp test_hw1_analysis.py test_analysis.py
 zip hw1_jaryszak_sydney.zip analysis.py test_analysis.py report.pdf AI_USAGE.md README.md
 ```
 

@@ -1,16 +1,25 @@
 from __future__ import annotations
 
+import importlib.util
+from pathlib import Path
+
 import numpy as np
 import pytest
 
-from analysis import (
-    part1c_descriptive_stats,
-    part1d_mean_ci,
-    part1e_prediction_interval,
-    part2_forecasts,
-    part3d_verify,
-    train,
+_HW1_DIR = Path(__file__).resolve().parent
+_SPEC = importlib.util.spec_from_file_location(
+    "hw1_analysis_module", _HW1_DIR / "analysis.py"
 )
+_HW1 = importlib.util.module_from_spec(_SPEC)
+assert _SPEC.loader is not None
+_SPEC.loader.exec_module(_HW1)
+
+part1c_descriptive_stats = _HW1.part1c_descriptive_stats
+part1d_mean_ci = _HW1.part1d_mean_ci
+part1e_prediction_interval = _HW1.part1e_prediction_interval
+part2_forecasts = _HW1.part2_forecasts
+part3d_verify = _HW1.part3d_verify
+train = _HW1.train
 
 
 def test_held_out_changes_do_not_affect_training_summaries_or_forecasts() -> None:
