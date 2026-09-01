@@ -10,3 +10,4 @@ __pycache__/
 htmlcov/
 .DS_Store
 student-work/
+hw1_jaryszak_sydney/test_analysis.py

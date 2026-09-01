@@ -7,7 +7,7 @@ Sydney Jaryszak — statistical review, forecast baselines, and agent audit.
 | File | Purpose |
 |------|---------|
 | `analysis.py` | Reproduces all numerical results for Parts 1–3 and saves figures |
-| `test_analysis.py` | Automated checks required for Part 4c |
+| `test_hw1_analysis.py` | Automated checks (repo copy; see below for Canvas) |
 | `report.pdf` | Written answers (submit separately) |
 | `AI_USAGE.md` | AI assistance audit record |
 
@@ -32,10 +32,10 @@ cd hw1_jaryszak_sydney
 pytest -q test_hw1_analysis.py
 ```
 
-For the Canvas ZIP, rename or copy the test file to `test_analysis.py` as required by the assignment:
+For the Canvas ZIP only, copy the test file to `test_analysis.py`. **Do not commit `test_analysis.py` to Git** — it conflicts with the lab's `test_analysis.py` and will break CI.
 
 ```bash
-cp test_hw1_analysis.py test_analysis.py
+cp test_hw1_analysis.py test_analysis.py   # local / ZIP only
 ```
 
 All four tests should pass.
